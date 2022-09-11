@@ -1,0 +1,105 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.background {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+
+
+.noise {
+    position: absolute;
+    pointer-events: none;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.noise2 {
+    pointer-events: none;
+    width: 300%;
+    height: 300%;
+    top: -120%;
+    left: -50%;
+    z-index: 10;
+    position: fixed;
+    opacity: .6;
+    animation: grain 8s steps(10) infinite;
+}
+
+@keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+}
+
+.poster {
+    z-index: 1;
+    width: 600px;
+}
+
+
+
+.termsWrapper {
+    position: relative;
+    width: 400px;
+}
+.termsContainer {
+    position: absolute;
+}
+
+.terms {
+    position: absolute;
+    top: 200px;
+    z-index: 10;
+    width: 400px;
+}
+.x {
+    position: absolute;
+    top: 207px;
+    right: 10px;
+    z-index: 10;
+    width: 20px;
+    cursor: no-drop;
+}
+.cancel {
+    position: absolute;
+    top: 390px;
+    left: 120px;
+    z-index: 10;
+    width: 100px;
+    cursor: no-drop;
+}
+.accept {
+    position: absolute;
+    top: 390px;
+    left: 240px;
+    z-index: 10;
+    width: 133px;
+    cursor: wait;
+    filter:contrast(.3) brightness(1.2);
+}
+.waiting {
+    position: absolute;
+    top: 390px;
+    left: 240px;
+    z-index: 10;
+    width: 133px;
+    cursor: pointer;
+}
+
